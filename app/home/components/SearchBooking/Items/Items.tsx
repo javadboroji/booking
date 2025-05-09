@@ -1,7 +1,10 @@
+"use client"
 import Drop from "@/components/custom/Drop/Drop";
 import React, { useEffect, useReducer } from "react"; 
 import { CiSearch } from "react-icons/ci";
 import searchItems from "@/app/Data/SearchingForm";
+import { redirect, useRouter } from 'next/navigation';
+import useFilterStore from "@/app/store/Filter";
 type searchState = {
   destination: string;
   type: string;
@@ -24,6 +27,7 @@ type Action =
 
 
 function Items() {
+
   /*================================ Search Reducer ==============================*/
   const searchReducer = (state: searchState, action: Action) => {
     switch (action.type) {
@@ -43,9 +47,14 @@ function Items() {
     duration: "",
   };
   const [state, dispatch] = useReducer(searchReducer, initialSearchState);
+   const{setFilter}= useFilterStore()
 /*================================ SearchIng Handler ==============================*/
+  const router= useRouter() 
   const searchHandler = () => {
-    console.log(state);
+    setFilter(state);
+    const query = new URLSearchParams(state).toString()
+    router.push(`./filter`)
+   // redirect('./filter')
   };
   return (
     <div className=" flex items-center p-2  w-[65%]">

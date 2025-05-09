@@ -1,7 +1,5 @@
 import { create } from 'zustand'
-interface IbannerSlide {
-    activeIndex :number
-}
+
 interface IBannerSlideStore {
     active :number ,
     slideLength :number ,

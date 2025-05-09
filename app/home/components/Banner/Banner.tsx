@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import image1 from "../../../../public/hero_bg_3_1.jpg";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import SearchBooking from "../SearchBooking/SearchBooking";
 import { bannerSlides } from "@/app/Data/bannerSlides";
