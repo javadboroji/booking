@@ -4,6 +4,7 @@ import WithFilterClientWrapper from "./hook/WrapFilter";
 import SearchResult from "./components/SearchResult/SearchResult";
 import SearchInFilter from "./components/SearchInFilter/SearchInFilter";
 import Sort from "./components/SortFilter/Sort";
+import Category from "@/components/custom/Wigets/Category";
 
 function page({ params }: { params: { slug: string } }) {
   return (
@@ -21,7 +22,9 @@ function page({ params }: { params: { slug: string } }) {
             {" "}
             <SearchResult />{" "}
           </div>
-          <div className="basis-4/12 bg-amber-950 h-[10dvh] "></div>
+          <div className="basis-4/12  h-[10dvh] px-4">
+            <Category/>
+          </div>
         </div>
       </div>
     </>
