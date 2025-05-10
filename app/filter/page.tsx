@@ -5,6 +5,7 @@ import SearchResult from "./components/SearchResult/SearchResult";
 import SearchInFilter from "./components/SearchInFilter/SearchInFilter";
 import Sort from "./components/SortFilter/Sort";
 import Category from "@/components/custom/Wigets/Category";
+import RecentPosts from "@/components/custom/Wigets/RecentPosts";
 
 function page({ params }: { params: { slug: string } }) {
   return (
@@ -22,8 +23,9 @@ function page({ params }: { params: { slug: string } }) {
             {" "}
             <SearchResult />{" "}
           </div>
-          <div className="basis-4/12  h-[10dvh] px-4">
+          <div className="basis-4/12 flex flex-col  h-[10dvh] px-4">
             <Category/>
+            <RecentPosts/>
           </div>
         </div>
       </div>
