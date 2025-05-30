@@ -18,11 +18,11 @@ const Card: React.FC<ICardProps> = ({ cardInfo }) => {
     const unRating = 5 - ratingStar.length;
     const unRatingStar = Array.from(Array(unRating).keys());
   return (
-    <div className="group/main flex flex-col rounded-xl border-[1px] m-4 hover:shadow-2xl transition-transform duration-600 hover:-translate-y-2">
-      <div className="relative overflow-hidden rounded-t-2xl">
-        <Image src={cardInfo.image} alt={cardInfo.title} className="transition-transform duration-600 group-hover/main:scale-125" />
+    <div className="min-h-[35rem] group/main flex flex-col justify-between rounded-xl border-[1px] m-4 hover:shadow-2xl transition-transform duration-600 hover:-translate-y-2">
+      <div className="relative overflow-hidden rounded-t-2xl flex pt-[100%]">
+        <Image src={cardInfo.image} alt={cardInfo.title} className="object-cover absolute top-0 left-0 h-full w-full transition-transform duration-600 group-hover/main:scale-125" />
       </div>    
-      <div className="flex flex-col py-4 px-6">
+      <div className="flex flex-col py-4 px-6 h-[50%]">
         <span className="text-2xl hover:text-[#1CA8CB] py-2">
           {cardInfo.title}
         </span>
