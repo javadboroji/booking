@@ -171,3 +171,17 @@ h6 {
   background-size: cover;
   z-index: -1;
 }
+@keyframes fly {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+}
+.subscribe-shape-animation{
+  animation: fly 10s linear infinite;
+}
