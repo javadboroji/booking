@@ -15,9 +15,12 @@ interface cardProps {
 }
 const Card: React.FC<cardProps> = ({ data }) => {
     return (
-        <div className="min-h-[20rem] w-full group/main flex flex-col justify-between rounded-2xl border-[1px] m-4 hover:shadow-2xl transition-transform duration-600 hover:-translate-y-2">
+        <div className="min-h-[20rem] w-full group/main flex flex-col justify-between rounded-2xl  m-4 transition-transform duration-600 hover:-translate-y-2">
             <div className="relative overflow-hidden rounded-t-2xl flex pt-[90%]">
-                <Image src={data.image} alt={data.country} className="object-cover absolute top-0 left-0 h-full w-full transition-transform duration-600 group-hover/main:scale-125" />
+                <Image src={data.image} alt={data.country} className="object-cover absolute top-0 left-0 h-full w-full transition-transform duration-600 group-hover/main:scale-115" />
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute inset-0 translate-y-[-100%] bg-gradient-to-b from-white/40 to-transparent rotate-0 group-hover/main:translate-y-full transition-transform duration-700 ease-in-out" />
+                </div>
             </div>
             <div className="flex flex-col  justify-center w-full bg-[#baecf893] rounded-b-2xl">
                 <span className="text-2xl text-center hover:text-[#1CA8CB] py-2">
@@ -40,7 +43,7 @@ const Card: React.FC<cardProps> = ({ data }) => {
                     </span>
                 </motion.button>
             </div>
-
+         
         </div>
     )
 }

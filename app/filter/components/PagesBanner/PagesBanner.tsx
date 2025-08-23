@@ -12,7 +12,7 @@ function PagesBanner() {
   console.log(destination ,'***');
   
   return (
-    <div className='flex w-full h-[50dvh] relative overflow-hidden'>
+    <div className='flex w-full h-[60dvh] relative overflow-hidden'>
       <div className='absolute w-full h-full top-0 left-0 right-0 flex banner'>
         <Image src={image} alt='image' className='object-cover' fill/>
       </div>
