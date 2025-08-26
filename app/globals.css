@@ -185,3 +185,27 @@ h6 {
 .subscribe-shape-animation{
   animation: fly 10s linear infinite;
 }
+.logo-char::before{
+  content: attr(data-char);
+  position: absolute;
+ top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(-90deg);
+  color: #1CA8CB;
+ opacity: 0;
+  transition: all 0.3s ease;
+   transform: rotate(-90deg);
+  animation: flipIn 5s infinite ease-in-out;
+
+}
+@keyframes flipIn {
+  0%, 75%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotateY(-90deg);
+  }
+
+  25%, 50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+}
