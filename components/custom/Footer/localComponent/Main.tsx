@@ -15,11 +15,11 @@ import { CiFacebook } from "react-icons/ci";
 
 function Main() {
   return (
-    <div className="mt-8 flex justify-between">
+    <div className="mt-8 flex flex-col lg:flex-row justify-between">
       {/*  description  */}
-      <div className="w-1/3 p-4">
+      <div className="lg:w-1/3 w-full p-4">
         <Image src={image} alt="logo" />
-        <span className="text-white text-xl leading-10 block mt-4">
+        <span className="text-white lg:text-xl lg:leading-10 block mt-4">
           Rapidiously myocardinate cross-platform intellectual capital model.
           Appropriately create interactive infrastructures
         </span>
@@ -34,8 +34,8 @@ function Main() {
       </div>
 
       {/* Menu */}
-      <div className="w-1/3 flex">
-        <div className="w-1/2">
+      <div className="lg:w-1/3 w-full flex flex-col lg:flex-row justify-between">
+        <div className="lg:w-1/2 w-full mt-3 lg:mt-0">
           <p className="text-2xl font-bold text-white "> Quick Links</p>
 
           <ul>
@@ -53,7 +53,7 @@ function Main() {
           </ul>
         </div>
 
-        <div className="w-1/2">
+        <div className="lg:w-1/2 w-full mt-3 lg:mt-0">
           <p className="text-2xl font-bold text-white "> Get In Touch</p>
 
           <div className="flex flex-col">

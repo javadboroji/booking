@@ -209,3 +209,14 @@ h6 {
     transform: translate(-50%, -50%) rotateY(0deg);
   }
 }
+.panle-img-mover{
+  animation: panelMove 10s ease-in-out infinite;
+}
+@keyframes panelMove {
+  0%, 100% {
+    transform: translatex(0);
+  }
+  50% {
+    transform: translatex(50px);
+  }
+}

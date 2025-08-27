@@ -6,12 +6,12 @@ export const Plan = () => {
     return (
         <div>
             <div className='container mx-auto py-12'>
-                <div className='flex items-center justify-between w-full'>
-                    <div className='flex-1/2'>
+                <div className='flex flex-wrap  justify-between w-full'>
+                    <div className='w-full lg:w-1/2 order-2 lg:order-1'>
                         <Card /></div>
 
 
-                    <div className='flex-1/4'>
+                    <div className='w-full lg:w-1/2 order-1 lg:order-2'>
                         <Description />
                     </div>
                 </div>

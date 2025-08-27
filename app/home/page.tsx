@@ -14,10 +14,10 @@ function HomePage() {
       {/* <Menu/>
       <Banner/>
       <Poplaur/>
-      <Category/>
+      <Category/> */}
       <Plan/>
-      <Footer/> */}
-      <LogoLoading/>
+      <Footer/>
+      {/* <LogoLoading/> */}
     </div>
   )
 }
