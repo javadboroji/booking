@@ -11,10 +11,10 @@ import LogoLoading from '@/components/custom/Loading/LogoLoading'
 function HomePage() {
   return (
     <div className='relative'>
-      {/* <Menu/>
+      <Menu/>
       <Banner/>
       <Poplaur/>
-      <Category/> */}
+      <Category/>
       <Plan/>
       <Footer/>
       {/* <LogoLoading/> */}

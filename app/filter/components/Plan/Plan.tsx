@@ -7,11 +7,11 @@ export const Plan = () => {
         <div>
             <div className='container mx-auto py-12'>
                 <div className='flex flex-wrap  justify-between w-full'>
-                    <div className='w-full lg:w-1/2 order-2 lg:order-1'>
+                    <div className='w-full lg:w-1/2 flex-1 order-2 lg:order-1'>
                         <Card /></div>
 
 
-                    <div className='w-full lg:w-1/2 order-1 lg:order-2'>
+                    <div className='w-full lg:w-1/3 order-1 lg:order-2'>
                         <Description />
                     </div>
                 </div>
