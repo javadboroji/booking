@@ -7,16 +7,18 @@ import Poplaur from '../filter/components/Poplaur/Poplaur'
 import Category from '../filter/components/Category/Category'
 import { Plan } from '../filter/components/Plan/Plan'
 import LogoLoading from '@/components/custom/Loading/LogoLoading'
+import Ghallery from '../filter/components/Ghallery/Ghallery'
 
 function HomePage() {
   return (
     <div className='relative'>
-      <Menu/>
-      <Banner/>
-      <Poplaur/>
-      <Category/>
-      <Plan/>
-      <Footer/>
+      <Menu />
+      <Banner />
+      <Poplaur />
+      <Category />
+      <Plan />
+      <Ghallery />
+      <Footer />
       {/* <LogoLoading/> */}
     </div>
   )

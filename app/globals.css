@@ -220,3 +220,10 @@ h6 {
     transform: translatex(50px);
   }
 }
+.bg-vector{
+  background-image: url(../public/line-pattern3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}

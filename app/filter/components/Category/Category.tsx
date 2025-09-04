@@ -39,7 +39,7 @@ function Category() {
     ]
 
     return (
-        <div className='bg-[#e9f6f9e1] py-18'>
+        <div className='bg-[#e9f6f9e1] py-18 bg-vector'>
             <div className='container mx-auto'>
                 <SectionTitle title='Tour Categories' center />
                 <Swiper
