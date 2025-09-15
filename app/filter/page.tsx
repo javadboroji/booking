@@ -10,6 +10,7 @@ import Popular from "@/components/custom/Wigets/Popular";
 import Advertisement from "@/components/custom/Wigets/Advertisement";
 import Footer from "@/components/custom/Footer/Footer";
 import Ghallery from "./components/Ghallery/Ghallery";
+import TourGuide from "./components/TourGuide/TourGuide";
 
 function page({ params }: { params: { slug: string } }) {
   return (
@@ -32,6 +33,7 @@ function page({ params }: { params: { slug: string } }) {
             <RecentPosts/>
             <Popular/>
             <Advertisement/>
+         
           
           </div>
         </div>

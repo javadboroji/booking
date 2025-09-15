@@ -43,7 +43,7 @@ function Ghallery() {
                         <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105' alt='image' src={image5} />
                         <HoverComponent />
                     </div>
-                    <div className='row-span-1 rounded-4xl relative group overflow-hidden '>
+                    <div className='row-span-1 rounded-4xl relative group overflow-hidden  '>
 
                         <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105' alt='image' src={image1} />
                         <HoverComponent />

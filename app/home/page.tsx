@@ -8,6 +8,7 @@ import Category from '../filter/components/Category/Category'
 import { Plan } from '../filter/components/Plan/Plan'
 import LogoLoading from '@/components/custom/Loading/LogoLoading'
 import Ghallery from '../filter/components/Ghallery/Ghallery'
+import TourGuide from '../filter/components/TourGuide/TourGuide'
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Category />
       <Plan />
       <Ghallery />
+      <TourGuide />
       <Footer />
       {/* <LogoLoading/> */}
     </div>
