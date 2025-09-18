@@ -1,3 +1,4 @@
+
 "use client"
 import SectionTitle from '@/components/custom/SectionTitle/SectionTitle'
 import React from 'react'
@@ -8,10 +9,7 @@ import image3 from "@/public/destination_3_4.jpg"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import arrowRigth from "@/public/hero-arrow-right.svg";
 import { motion } from "framer-motion";
-import Image from 'next/image'
 function Poplaur() {
 
     const pouplarData = [

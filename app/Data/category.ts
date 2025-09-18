@@ -1,5 +1,3 @@
-import { count } from "node:console";
-import { link } from "node:fs";
 
 export const category =[
     {

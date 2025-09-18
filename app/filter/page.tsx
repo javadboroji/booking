@@ -1,6 +1,5 @@
 import React from "react";
 import PagesBanner from "./components/PagesBanner/PagesBanner";
-import WithFilterClientWrapper from "./hook/WrapFilter";
 import SearchResult from "./components/SearchResult/SearchResult";
 import SearchInFilter from "./components/SearchInFilter/SearchInFilter";
 import Sort from "./components/SortFilter/Sort";
@@ -9,10 +8,9 @@ import RecentPosts from "@/components/custom/Wigets/RecentPosts";
 import Popular from "@/components/custom/Wigets/Popular";
 import Advertisement from "@/components/custom/Wigets/Advertisement";
 import Footer from "@/components/custom/Footer/Footer";
-import Ghallery from "./components/Ghallery/Ghallery";
-import TourGuide from "./components/TourGuide/TourGuide";
 
-function page({ params }: { params: { slug: string } }) {
+
+function page() {
   return (
     <div className="flex flex-col">
       <PagesBanner />

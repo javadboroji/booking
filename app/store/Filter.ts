@@ -7,7 +7,7 @@ export interface IFilter {
 interface IFilterStore extends IFilter {
   setFilter: (filters: IFilter) => void;
 }
-const useFilterStore = create<IFilterStore>((set, get) => ({
+const useFilterStore = create<IFilterStore>((set, ) => ({
   destination: "",
   duration: "",
   type: "",

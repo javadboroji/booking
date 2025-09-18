@@ -1,27 +1,27 @@
-'use client';
+// 'use client';
 
-import useFilterStore from '@/app/store/Filter';
-import React from 'react';
-export interface IWrappFilters {
-  destination: string;
-  duration: string;
-  type: string;
-}
-type Props = {
-  children: React.ReactElement; 
-};
+// import useFilterStore from '@/app/store/Filter';
+// import React from 'react';
+// export interface IWrappFilters {
+//   destination: string;
+//   duration: string;
+//   type: string;
+// }
+// type Props = {
+//   children: React.ReactElement<any>; 
+// };
 
-const WithFilterClientWrapper = ({ children }: Props) => {
-  const { destination, duration, type } = useFilterStore();
+// const WithFilterClientWrapper = ({ children }: Props) => {
+//   const { destination, duration, type } = useFilterStore();
 
-  return <>   
-  {React.isValidElement(children) &&
-    React.cloneElement(children, {
-      destination,
-      duration,
-      type,
-    })}
-</>
-};
+//   return <>   
+//   {React.isValidElement(children) &&
+//     React.cloneElement(children, {
+//       destination,
+//       duration,
+//       type,
+//     })}
+// </>
+// };
 
-export default WithFilterClientWrapper;
+// export default WithFilterClientWrapper;

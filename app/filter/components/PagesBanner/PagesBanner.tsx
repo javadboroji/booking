@@ -1,14 +1,12 @@
 "use client"
-import useFilterStore, { IFilter } from '@/app/store/Filter'
+import useFilterStore from '@/app/store/Filter'
 import Menu from '@/components/custom/Menu/Menu';
 import React from 'react'
 import image from "@/public/hero_bg_3_2.jpg"
 import Image from 'next/image';
-interface IPagesBannerProps {
 
-}
 function PagesBanner() {
-  const { destination, duration, type } = useFilterStore();
+  const { destination } = useFilterStore();
   console.log(destination ,'***');
   
   return (

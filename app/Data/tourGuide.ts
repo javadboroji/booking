@@ -1,3 +1,4 @@
+
 import { CardProps } from "../filter/components/TourGuide/components/Card";
 import image1 from '@/public/team_1_1.jpg'
 import image2 from '@/public/team_1_2.jpg'

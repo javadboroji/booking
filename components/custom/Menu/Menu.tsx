@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logoBlack from "./../../../public/logo2.svg";
 import logoWhite from "./../../../public/logo-white2.svg";
 import { CiMenuFries } from "react-icons/ci";
 
