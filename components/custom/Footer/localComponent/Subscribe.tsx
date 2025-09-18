@@ -5,21 +5,21 @@ import Image from "next/image";
 function Subscribe() {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-between lg:px-4 lg:py-8 py-4 relative border-b-[1px] border-[#E9F6F9]">
-        <Image src={image} alt="shape" className="absolute right-full subscribe-shape-animation"/>
-      <h1 className="text-white lg:!text-5xl text-xl lg:leading-16">
+        <Image src={image} alt="shape" className="absolute right-full subscribe-shape-animation hidden xl:block"/>
+      <h1 className="text-white xl:!text-5xl  !text-2xl xl:leading-16 my-4 md:my-0">
         {" "}
         Get Updated The Latest <br /> Newsletter
       </h1>
 
-      <div className="flex items-center ">
+      <div className="flex md:flex-row flex-col items-center ">
         <input
-          className="lg:p-6 p-3 mx-4 rounded-full border-[1px]  border-white  text-white lg:flex-1 lg:w-[30rem] w-[15rem]"
+          className="xl:p-6 p-3 mx-4 rounded-full border-[1px]  border-white  text-white lg:flex-1 xl:w-[30rem] lg:w-[20rem] w-full"
           placeholder="Enter Email"
         />
 
         <button
-          className="group relative overflow-hidden text-white lg:w-1/3 hover:cursor-pointer hover:text-black 
-              hover:bg-transparent my-6 lg:p-6 p-3  rounded-full bg-[#1CA8CB]  "
+          className="flex justify-center group relative overflow-hidden text-white xl:w-1/3 w-full hover:cursor-pointer hover:text-black 
+              hover:bg-transparent my-6 xl:p-6 p-3  rounded-full bg-[#1CA8CB]  "
         >
           <span
             className="absolute left-0 top-0 h-full w-full bg-white origin-left scale-x-0 transition-transform 

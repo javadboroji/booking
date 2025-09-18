@@ -5,9 +5,9 @@ import { Description } from './Description'
 export const Plan = () => {
     return (
         <div>
-            <div className='container mx-auto py-12'>
-                <div className='flex flex-wrap  justify-between w-full'>
-                    <div className='w-full lg:w-1/2 flex-1 order-2 lg:order-1'>
+            <div className='container mx-auto lg:py-12 py-6'>
+                <div className='flex lg:flex-row flex-col  lg:flex-wrap  justify-between w-full'>
+                    <div className='w-full lg:w-1/2 w-full flex-1 order-2 lg:order-1'>
                         <Card /></div>
 
 

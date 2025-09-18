@@ -1,6 +1,6 @@
 "use client"
 import Drop from "@/components/custom/Drop/Drop";
-import React, { useEffect, useReducer } from "react"; 
+import React, { useEffect, useReducer } from "react";
 import { CiSearch } from "react-icons/ci";
 import searchItems from "@/app/Data/SearchingForm";
 import { redirect, useRouter } from 'next/navigation';
@@ -13,17 +13,17 @@ type searchState = {
 
 type Action =
   | {
-      type: "destination";
-      payload: string;
-    }
+    type: "destination";
+    payload: string;
+  }
   | {
-      type: "type";
-      payload: string;
-    }
+    type: "type";
+    payload: string;
+  }
   | {
-      type: "duration";
-      payload: string;
-    };
+    type: "duration";
+    payload: string;
+  };
 
 
 function Items() {
@@ -47,34 +47,34 @@ function Items() {
     duration: "",
   };
   const [state, dispatch] = useReducer(searchReducer, initialSearchState);
-   const{setFilter}= useFilterStore()
-/*================================ SearchIng Handler ==============================*/
-  const router= useRouter() 
+  const { setFilter } = useFilterStore()
+  /*================================ SearchIng Handler ==============================*/
+  const router = useRouter()
   const searchHandler = () => {
     setFilter(state);
     const query = new URLSearchParams(state).toString()
     router.push(`./filter`)
-   // redirect('./filter')
+    // redirect('./filter')
   };
   return (
-    <div className=" flex items-center p-2  w-[65%]">
+    <div className=" flex flex-wrap lg:flex-nowrap md:items-center p-2  md:w-[65%] w-full order-2 md:order-0">
       {searchItems?.map((item) => {
         return (
           <div
-            className="m-3 relative flex items-center w-1/3 after:content-[''] after:absolute after:top-0 after:right-0 after:w-px after:h-[60%] after:bg-[#E1E4E5]"
+            className="md:m-3 relative flex items-center w-1/3 after:content-[''] after:absolute after:top-0 after:right-0 after:w-px lg:after:h-[100%] after:bg-[#E1E4E5]"
             key={item.id}
           >
-            <div className="p-3"> {item.icon}</div>
-            <div className=" ml-2 ">
+            <div className="p-1 hidden lg:block"> {item.icon}</div>
+            <div className=" ml-2  w-full mx-2">
               {/* <span> {item.title}</span> */}
 
               <Drop
                 value={state[item.name as keyof typeof state]}
                 onChange={(val) =>
-                  dispatch({ type: item.name  as any, payload: val })
+                  dispatch({ type: item.name as any, payload: val })
                 }
                 name={item.dropPlace}
-                selectWidth="280px"
+                //selectWidth="280px"
                 items={item.drop}
                 placeholder={item.name}
               />
@@ -86,7 +86,7 @@ function Items() {
       <button
         type="submit"
         onClick={searchHandler}
-        className="group relative  w-1/3 overflow-hidden  text-white  p-3  hover:cursor-pointer hover:text-white 
+        className="group relative  md:w-1/3 w-full overflow-hidden  text-white   p-2 my-2 md:mt-0  hover:cursor-pointer hover:text-white 
           hover:bg-transparent   rounded-full  bg-[#1CA8CB]   "
       >
         <span
@@ -95,8 +95,8 @@ function Items() {
         />
 
         <div className="relative z-10 flex items-center w-full">
-          <CiSearch className="text-3xl" />
-          <span className="px-2"> Search </span>
+          <CiSearch className="lg:text-3xl text-xl" />
+          <span className="px-2 text-sm lg:text-lg"> Search </span>
         </div>
       </button>
     </div>

@@ -12,7 +12,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="w-full h-[90dvh] flex flex-col relative banner">
+    <div className="w-full px-4 h-[90dvh] flex flex-col relative banner">
       {bannerSlides && bannerSlides.length > 0 && (
         <React.Fragment key={bannerSlides[active]?.id}>
           <Image
@@ -27,7 +27,7 @@ function Banner() {
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="!text-8xl text-white"
+                className="xl:!text-8xl lg:!text-6xl my-4 text-white"
               >
                 {bannerSlides[active].title}
               </motion.h1>
@@ -36,7 +36,7 @@ function Banner() {
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-white text-xl py-2 w-1/2"
+                className="text-white xl:text-xl lg:text-lg py-2 md:w-1/2"
               >
                 {bannerSlides[active].subtitle}
               </motion.span>
@@ -46,7 +46,7 @@ function Banner() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="group relative overflow-hidden text-white w-fit hover:cursor-pointer hover:text-black 
-              hover:bg-transparent my-6 py-4 px-10 rounded-full bg-transparent border-[1px] border-white"
+              hover:bg-transparent lg:my-6 py-4 px-10 rounded-full bg-transparent border-[1px] border-white"
               >
                 <span
                   className="absolute left-0 top-0 h-full w-full bg-white origin-left scale-x-0 transition-transform 

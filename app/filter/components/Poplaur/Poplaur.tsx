@@ -51,10 +51,24 @@ function Poplaur() {
         <div className='flex flex-col my-16 container mx-auto'>
             <SectionTitle title='Popular Destination' />
             <Swiper
-                slidesPerView={4}
+
                 spaceBetween={10}
                 pagination={{
                     clickable: true,
+                }}
+                breakpoints={{
+                    1280: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    980: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                    },
+                    680: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    }
                 }}
                 className="mySwiper w-full flex overflow-hidden"
             >
@@ -82,7 +96,7 @@ function Poplaur() {
                     <span className="relative z-10 group-hover:text-white">
                         View All
                     </span>
-            
+
                 </motion.button>
             </div>
         </div>

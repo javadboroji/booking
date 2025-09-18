@@ -75,17 +75,17 @@ function Menu() {
     showMenu && (
       <div
         className={clsx(
-          "w-full z-50 fixed top-0 left-0 right-0 h-[6rem]  flex  justify-center transition-transform ease-[cubic-bezier(0.23,1,0.32,1)] duration-[8000ms] ease-in-out",
+          "w-full z-50 fixed top-0 left-0 right-0 h-[6rem]  flex  justify-center items-center transition-transform ease-[cubic-bezier(0.23,1,0.32,1)] duration-[8000ms] ease-in-out",
           showMenu ? "translate-y-0" : "-translate-y-full",
           menuBg === "transition" ? "bg-[#0000004b]" : "bg-black"
         )}
       >
-        <Image src={logoWhite} alt="logo" />
-        <ul className="flex items-center">
+        <Image src={logoWhite} alt="logo" className="w-[150px] h-[150px]" />
+        <ul className=" items-center hidden md:flex">
           {menuList?.map((item) => {
             return (
-              <li className="relative px-14 py-8" key={item.id}>
-                <Link className="text-white  font-bold " href={item.url}>
+              <li className="relative lg:px-14 px-8 py-8 " key={item.id}>
+                <Link className="text-white  lg:font-bold lg:text-lg text-sm " href={item.url}>
                   {item.label}
                 </Link>
 
@@ -95,7 +95,7 @@ function Menu() {
                       return (
                         <li className="my-2" key={child.id}>
                           <Link
-                            className="text-white p-2 font-bold "
+                            className="text-white p-2 font-bold md:text-sm"
                             href={child.url}
                           >
                             {child.label}

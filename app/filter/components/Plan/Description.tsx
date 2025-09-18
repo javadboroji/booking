@@ -24,10 +24,10 @@ export const Description = () => {
 
     }
     return (
-        <div className='flex flex-col w-10/12'>
-            <p className='text-4xl font-bold text-[#113D48]'> {data.title}</p>
+        <div className='flex flex-col items-center lg:w-10/12 w-full px-4'>
+            <p className='lg:text-4xl text-2xl font-bold text-[#113D48]'> {data.title}</p>
 
-            <span className='text-gray-400 font-medium py-4'>{data.dedcription}</span>
+            <span className='text-gray-400 font-medium text-sm lg:text-lg py-4'>{data.dedcription}</span>
 
                 <div className='flex flex-col'>
                     {data.plans?.map(item => {

@@ -17,7 +17,7 @@ function Main() {
   return (
     <div className="mt-8 flex flex-col lg:flex-row justify-between">
       {/*  description  */}
-      <div className="lg:w-1/3 w-full p-4">
+      <div className="xl:w-1/3 lg:h-1/2 w-full p-4">
         <Image src={image} alt="logo" />
         <span className="text-white lg:text-xl lg:leading-10 block mt-4">
           Rapidiously myocardinate cross-platform intellectual capital model.
@@ -34,7 +34,7 @@ function Main() {
       </div>
 
       {/* Menu */}
-      <div className="lg:w-1/3 w-full flex flex-col lg:flex-row justify-between">
+      <div className="xl:w-1/3 lg:h-1/2 w-full flex flex-col lg:flex-row justify-between">
         <div className="lg:w-1/2 w-full mt-3 lg:mt-0">
           <p className="text-2xl font-bold text-white "> Quick Links</p>
 
@@ -43,7 +43,7 @@ function Main() {
               return (
                 <li
                   key={item.id}
-                  className="text-white p-2 text-xl flex items-baseline hover:text-[#1CA8CB]"
+                  className="text-white p-2 xl:text-xl lg:text-lg text-sm flex items-baseline hover:text-[#1CA8CB]"
                 >
                   <IoIosArrowForward className="mr-4" />{" "}
                   <Link href={"/"}>{item.title}</Link>

@@ -10,20 +10,18 @@ import { MdSavedSearch } from "react-icons/md";
 
 function Ghallery() {
     return (
-        <div className='py-8'>
+        <div className='lg:py-8 lg:mt-0 mt-24 mt-0'>
             <SectionTitle title='Recent Gallery' center={true} />
             <div className='container mx-auto'>
-                <div className='grid grid-flow-col grid-cols-4 grid-rows-2 gap-4 h-[40rem]'>
+                <div className='grid grid-flow-col lg:grid-cols-4 grid-cols-2 lg:grid-rows-2 grid-rows-4  gap-4 h-[40rem]'>
 
-
-
-                    <div className='relative overflow-hidden  group   row-span-2 rounded-4xl '>
+                    <div className='relative overflow-hidden  group   lg:row-span-2 row-span-1 rounded-4xl '>
                         <div className='w-full  h-full overflow-hidden transition-all delay-300 ease-out '>
                             <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105' alt='image' src={image1} />
                             <HoverComponent />
                         </div>
                     </div>
-                    <div className=' row-span-1 row-span-1 rounded-4xl  relative group overflow-hidden'>
+                    <div className=' row-span-1 rounded-4xl  relative group overflow-hidden'>
                         <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105 ' alt='image' src={image2} />
                         <HoverComponent />
 
@@ -43,7 +41,7 @@ function Ghallery() {
                         <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105' alt='image' src={image5} />
                         <HoverComponent />
                     </div>
-                    <div className='row-span-1 rounded-4xl relative group overflow-hidden  '>
+                    <div className=' row-span-2 lg:row-span-1 rounded-4xl relative group overflow-hidden  '>
 
                         <Image className='-z-10 transition-transform duration-500 ease-in rounded-4xl absolute group-hover:scale-105' alt='image' src={image1} />
                         <HoverComponent />

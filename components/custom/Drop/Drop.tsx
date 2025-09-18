@@ -27,7 +27,7 @@ type DropProps = {
 const Drop: React.FC<DropProps> = ({ items ,initialValue ,onChange , value,placeholder , selectWidth="180px"}) => {
   return (
     <Select value={value}  onValueChange={(val)=>onChange(val)  }>
-      <SelectTrigger className={`w-[${selectWidth}]`}>
+      <SelectTrigger className={`w-full md:w-[${selectWidth}]`}>
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
 

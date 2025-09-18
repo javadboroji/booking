@@ -31,7 +31,7 @@ function Category() {
             image: image4 as any,
             title: "Wildlife"
         },
-         {
+        {
             id: "cat-22",
             image: image1 as any,
             title: "Cruisea"
@@ -43,10 +43,26 @@ function Category() {
             <div className='container mx-auto'>
                 <SectionTitle title='Tour Categories' center />
                 <Swiper
-                    slidesPerView={4}
-                    spaceBetween={10}
                     loop
                     autoplay
+                    breakpoints={{
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        980: {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        680: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                           500: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        }
+                    }}
                     pagination={{
                         clickable: true,
                     }}
@@ -56,10 +72,11 @@ function Category() {
                     {categories?.map(item => {
                         return (
                             <SwiperSlide key={item.id}>
-                                <Card  data={item} />
+                                <Card data={item} />
                             </SwiperSlide>
 
-                          )})
+                        )
+                    })
                     }
                 </Swiper>
             </div>
