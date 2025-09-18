@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logoBlack from "./../../../public/logo2.svg";
 import logoWhite from "./../../../public/logo-white2.svg";
+import { CiMenuFries } from "react-icons/ci";
 
 import clsx from "clsx";
 import Link from "next/link";
@@ -48,7 +49,10 @@ function Menu() {
   ];
   const [showMenu, setShowMenu] = useState(true);
   const [menuBg, setMenuBg] = useState("transition");
-
+  const [open, setOpen] = useState(false)
+  const toggleMenu = () => {
+    setOpen(prev => !prev)
+  }
   useEffect(() => {
     function handleScroll() {
       const scrollY = window.scrollY;
@@ -75,16 +79,27 @@ function Menu() {
     showMenu && (
       <div
         className={clsx(
-          "w-full z-50 fixed top-0 left-0 right-0 h-[6rem]  flex  justify-center items-center transition-transform ease-[cubic-bezier(0.23,1,0.32,1)] duration-[8000ms] ease-in-out",
+          "w-full z-100 fixed top-0 left-0 right-0  px-4 flex flex-col md:flex-row  lg:justify-center items-center   transition-transform  duration-[8000ms] ease-in-out",
           showMenu ? "translate-y-0" : "-translate-y-full",
-          menuBg === "transition" ? "bg-[#0000004b]" : "bg-black"
+          menuBg === "transition" ? "bg-[#0000004b]" : "bg-black",
+          open ? "h-[100dvh] md:h-[6rem] items-start !bg-black" : "h-[6rem]"
         )}
       >
-        <Image src={logoWhite} alt="logo" className="w-[150px] h-[150px]" />
-        <ul className=" items-center hidden md:flex">
+        <div className="flex justify-between items-center w-full md:w-1/4">
+          <Image src={logoWhite} alt="logo" className="w-[100px] lg:w-[110px] h-[100px] lg:h-[110px]" />
+          <div className="md:hidden ">
+            <button onClick={() => toggleMenu()} >
+              <CiMenuFries size={24} className="text-white" />
+            </button>
+          </div>
+        </div>
+        <ul className={clsx(" items-center  md:flex",
+          open ? "flex flex-col" : "hidden"
+
+        )}>
           {menuList?.map((item) => {
             return (
-              <li className="relative lg:px-14 px-8 py-8 " key={item.id}>
+              <li className="relative lg:px-14 md:p-8 p-4 " key={item.id}>
                 <Link className="text-white  lg:font-bold lg:text-lg text-sm " href={item.url}>
                   {item.label}
                 </Link>
