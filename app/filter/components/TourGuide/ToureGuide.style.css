@@ -1,8 +1,16 @@
 .bg-guide{
-    background: url("../../../../public/team_bg_2.jpg");
+   position: relative;
+}
+.bg-guide::after{
+    content: "";
+     background: url("../../../../public/team_bg_2.jpg");
     background-repeat: no-repeat;
-    width: 100%;
-    height: 35rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    z-index: -1;
     background-position: center;
     background-size: cover;
 }
