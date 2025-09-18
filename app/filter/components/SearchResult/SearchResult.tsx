@@ -54,9 +54,9 @@ function SearchResult() {
         },
     ]
   return (
-    <div className='flex flex-wrap '>
+    <div className='flex flex-wrap  '>
         {result?.map((item )=>{
-            return <div key={item.id} className='basis-1/3'><Card  cardInfo={item}/></div>
+            return <div key={item.id} className='xl:w-1/3 md:w-1/2 w-full p-2'><Card  cardInfo={item}/></div>
         })}
     </div>
   )

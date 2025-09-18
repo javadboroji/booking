@@ -16,7 +16,7 @@ function Sort() {
     setSort(val);
   };
   return (
-    <div className="basis-2/12 ">
+    <div className="lg:w-1/6 md:w-1/3 ">
       <Drop
         name="sort"
         items={covert()}

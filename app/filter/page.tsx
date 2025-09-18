@@ -16,19 +16,18 @@ function page({ params }: { params: { slug: string } }) {
   return (
     <div className="flex flex-col">
       <PagesBanner />
-      <div className="flex flex-col  container gap-7     mx-auto my-8">
-        <div className="flex justify-between ">
+      <div className="flex flex-col  container     mx-auto lg:my-6 ">
+        <div className="flex flex-col lg:flex-row justify-between items-center ">
           <SearchInFilter />
-
           <Sort/>
         </div>
        
-        <div className="flex">
-           <div className="basis-[70%] min-h-[10dvh]">
+        <div className="flex flex-wrap">
+           <div className="lg:basis-[70%] basis-[100%] min-h-[10dvh] p-4">
             {" "}
             <SearchResult />{" "}
           </div> 
-          <div className="basis-[28%] flex flex-col  min-h-[10dvh] px-4">
+          <div className="lg:basis-[28%] basis-[100%] flex flex-col  min-h-[10dvh] px-4">
             <Category/>
             <RecentPosts/>
             <Popular/>
